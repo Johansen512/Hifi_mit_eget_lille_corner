@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+html, body{
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    border: black solid 2px;
+}
+.swipeList{
+    list-style-type: none;
+    padding: 0;
+}
+
+.swipeList__item{
+    height: 100px;
+    background-color: rgb(58, 105, 105);
+    position: relative;
+    left: 0;
+    margin-bottom: 1em;
+}
