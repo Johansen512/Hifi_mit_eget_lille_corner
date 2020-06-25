@@ -30,6 +30,36 @@ const frontelement12 = document.querySelector('.hide12');
 let score = 0;
 let scoreValue = document.querySelector (".scoreValue");
 
+var sheepSound = document.getElementById("soundBah");
+var fartSound = document.getElementById ("soundFart");
+
+function toggleBah(){
+  sheepSound.play()
+}
+
+function toggleFart(){
+  fartSound.play()
+}
+
+var myAudio = document.getElementById("sound");
+var isPlaying = false;
+
+function togglePlay() {
+  if (isPlaying) {
+    myAudio.pause()
+  } else {
+    myAudio.play();
+  }
+};
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+
+
+
 
 
 
@@ -77,7 +107,7 @@ document.body.addEventListener("click", event => {
 
   else if (event.target == element3 || event.target == element5 || event.target == element8 || event.target == element11)
   {
-    
+    toggleFart()
     event.target.style.display = "none";
     
   score--;
@@ -87,7 +117,7 @@ document.body.addEventListener("click", event => {
   }
 
   else{
-  
+  toggleBah();
   //event.target.style.display = "none";
   event.target.style.display = "none";
   score++;
@@ -132,13 +162,22 @@ let downloadTimer = setInterval(function(){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "";
     document.getElementById("stickIn").style.display = "block";
+    togglePlay();
+    
+    
+    /*document.getElementById ("dropcontent").style.display = "block";*/
   } else {
     document.getElementById("countdown").innerHTML = timeleft + " SECONDS REMAINING";
+    
+    
+    
+    /*document.getElementById ("dropcontent").style.display = "none";*/
   }
   timeleft -= 1;
 }, 1000);
 
 
 function reStart () {
-  location.reload ()
+  location.reload ();
+  togglePlay();
 }

@@ -25,9 +25,17 @@ height: 2em;
 background-color: rgb(214, 173, 68);
 border: rgb(156, 115, 10) 5px solid;
 font-size: 0.5em;
+margin: 0.5em;
+cursor: pointer;
 
   }
-.regler{
+
+/*.regler{
+    
+    font-family: 'Cabin', sans-serif;  
+}*/
+
+.btnWrap{
     position: relative;
     
 }
@@ -35,25 +43,29 @@ font-size: 0.5em;
   .dropcontent{
     display: none;
     position: absolute;
-    background-color: #eccc64;
-    
+    top: 78px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    padding: 20px;
+    z-index: 300;
+    background-color: #fdeaaa;
+    justify-content: space-evenly;
     margin: 30px 20px 0 30px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 3;
+    
   }
 
-  .topbox:hover .dropcontent  {
-    position: absolute;
-      top: 150px;
-      left: 400px;
-      width: 600px;
-      height: 600px;
-      padding: 20px;
-      z-index: 300;
-      background-color: #fdeaaa;
+  .dropcontent p{
+      left: 20px;
+      align-self: center;
+  }
+
+  .btnWrap:hover .dropcontent{
       display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
+      flex-direction: column;
+      border: 10px solid black;
+
     
 }
 
@@ -106,6 +118,7 @@ position: relative;
     height: 600px;
     background-image: url(/img/background4.png);
     background-repeat: no-repeat;
+    
         
 }
 

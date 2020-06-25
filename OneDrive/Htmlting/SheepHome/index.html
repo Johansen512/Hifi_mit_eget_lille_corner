@@ -8,17 +8,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;0,700;1,700&display=swap" rel="stylesheet"
     <title></title>
 </head>
-<body>
-    <main>
+<body onload="togglePlay()">
+    
+        
+    <!--<audio autoplay loop>
+        <source src="/Sound/test1.mp3" type="audio/mpeg">
+            
+          </audio>-->
+        <main>
+            
         <h1 class="Titel">No Sheep in Sight Games Præsenterer: HVOR FÅR?</h1>
         <header class="topbox">
         
         <p class="scoreValue">SCORE:0 </p>
         <div class="counter" id="countdown">NO SECONDS REMAINING</div>
-        <button class="startknap" id="startKnap" onclick="reStart()">START SPILLET</button>
-        <button class="regler" id="pulldown">GAMEPLAY</button>
+        <button class="startknap" id="startKnap" onclick=reStart()>START SPILLET</button>
+        <audio class="play" id="sound" >
+            <source src="/Sound/test1.mp3" type="audio/mpeg">
+                
+              </audio>
+        
+        <div class="btnWrap" id="btnWrap"><button class="regler" id="pulldown">GAMEPLAY</button>
 
-        <div class="dropcontent"><p class="spilregler">REGLER
+        <div class="dropcontent" id="dropcontent"><p class="spilregler">REGLER
             <ul class="liste">
             <li>Fang så mange får som du kan nå.</li>
         <li>Fårene skjuler sig bag ... ting ... skjulesteder.</li>
@@ -26,11 +38,22 @@
             <li>Klik på fårene for at få point ... men skynd dig for tiden løber ud!</li>
             <li> klik IKKE på ... ikke-fårene ... de gi'r minus point.</li>
             <li>Du har kun 30 sekunder!</li></ul>
-        </p></div>
+        </p></div></div>
+
         </header>
 
 
         <div class="wrapper">
+            <audio class="playBah" id="soundBah" >
+                <source src="/Sound/sheep.mp3" type="audio/mpeg">
+                    
+                  </audio>
+
+                  <audio class="playFart" id="soundFart" >
+                    <source src="/Sound/fart1.mp3" type="audio/mpeg">
+                        
+                      </audio>
+            
             <div class="stick" id="stickIn">GAME OVER</div>
             
             <div class="cover hide1" id="coverting1">
